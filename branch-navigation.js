@@ -1,0 +1,2 @@
+const branchDestinations={"product-ai":"https://aether-ai.humblemast8.chatgpt.site","product-soft":"https://aethersoft.humblemast8.chatgpt.site","product-labs":"https://aetherlabs.humblemast8.chatgpt.site"};
+document.querySelectorAll('.product-card').forEach(card=>{const branch=Object.keys(branchDestinations).find(name=>card.classList.contains(name));if(!branch)return;card.addEventListener('click',event=>{if(event.target.closest('a,button'))return;window.location.assign(branchDestinations[branch])})});
